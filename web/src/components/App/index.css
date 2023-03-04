@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../assets/fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('../../assets/fonts/Cascadia.ttf');
+}
+
+:root {
+    --font-text: 'Open Sans';
+    --font-title: 'Cascadia Code';
+    --github-brand-color: #333;
+    --facebook-brand-color: #1877f2;
+    --font-topic: 'Climate Crisis', cursive;
+}
+
+body {
+    font-family: var(--font-text) !important;
+    font-size: medium !important;
+    scroll-behavior: smooth;
+    font-size: 14px !important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(
+        var(--bs-light-rgb),
+        var(--bs-bg-opacity)
+    ) !important;
+}
+
+a {
+    color: unset !important;
+    text-decoration: none !important;
+}
+
+.font-title {
+    font-family: var(--font-title) !important;
+}
+
+.font-topic {
+    font-family: var(--font-topic) !important;
+}
+
+.related .col-lg-8,
+.related .col-lg-4 {
+    z-index: 3;
+}
+
+.z-999 {
+    z-index: 999;
+}
+
+#skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 150px;
+    min-height: 150px;
+    transform: translate(5%, -10%);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    border-radius: 20px;
+    background-color: #e5e5f7;
+    background-image: repeating-radial-gradient(
+            circle at 0 0,
+            transparent 0,
+            #e5e5f7 10px
+        ),
+        repeating-linear-gradient(#444cf755, #444cf7);
+}
+
+#project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 150px;
+    min-height: 150px;
+    transform: translate(-5%, -10%);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    border-radius: 50%;
+    background-color: #e5e5f7;
+    background-image: linear-gradient(135deg, #444cf7 25%, transparent 25%),
+        linear-gradient(225deg, #444cf7 25%, transparent 25%),
+        linear-gradient(45deg, #444cf7 25%, transparent 25%),
+        linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
+    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
+}
+
+.profile-img-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.profile-img-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../../assets/blue-blob.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.avatar {
+    transform: translate(20%, 18%);
+}
+
+.avatar-container {
+    width: 80px;
+    height: 80px;
+}
+
+/* Navbar field stylesheet */
+
+header .navbar {
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-delay: 100ms;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(-5px);
+}
+
+header .navbar.sticky {
+    padding: 10px 0px;
+    background: white !important;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+}
+
+header .navbar.attached {
+    position: static;
+}
+
+header .navbar.unattached {
+    position: fixed;
+    transform: translateY(10px);
+}
+
+/* Profile field stylesheet */
+
+.skew-2 {
+    transform: skewX(2deg);
+}
+
+@keyframes up-to-down-reverse {
+    from {
+        transform: translateY(5px);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.up-to-down-reverse.infinite {
+    animation-name: up-to-down-reverse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.social-links ul {
+    list-style-type: none;
+    gap: 4px;
+}
+
+/* Contact field stylesheet */
+
+.bg-sky {
+    background-image: url('../../assets/sky.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-code-bro {
+    background-image: url('../../assets/Coding-bro.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-cols {
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 4px;
+}
+
+.skew-2-reverse {
+    transform: skewX(-2deg);
+}
+
+/* Skills field stylesheet */
+.gap-4 {
+    gap: 4px;
+}
+
+@media screen AND (min-width: 768px) {
+    .cols-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cols-lg-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Project field stylesheet */
+
+#project .bg-project:hover {
+    transform: scale(1.2) !important;
+}
+
+#project ul {
+    list-style-type: none;
+}
+
+a.disabled {
+    pointer-events: none;
+    color: gray;
+}
+
+.text-gray {
+    color: gray;
+}
+
+ul.social-link {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 350ms 200ms;
+    opacity: 0;
+    z-index: 999;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+@media screen AND (min-width: 768px) {
+    .cols-lg-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen AND (max-width: 992px) {
+    .bg-project-container {
+        height: 40vh !important;
+    }
+}
+
+@media screen AND (min-width: 992px) {
+    .vh-lg-50 {
+        height: 50vh;
+    }
+}

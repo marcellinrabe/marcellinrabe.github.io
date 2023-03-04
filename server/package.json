@@ -1,0 +1,22 @@
+{
+    "name": "marcellinrabe-portfolio-server",
+    "version": "1.0.0",
+    "description": "RABE Marcellin portfolio interface server",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
+    },
+    "author": "marcellinrabe <marcellinp20.aps1a@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "@octokit/core": "^4.2.0",
+        "express": "^4.18.2",
+        "octokit": "^2.0.14"
+    }
+}
