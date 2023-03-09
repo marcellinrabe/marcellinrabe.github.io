@@ -4,8 +4,11 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 export default function Project({ publicRepos }) {
     return (
-        <div id="project" className="my-5 position-relative">
-            <div className="z-999 position-relative">
+        <div
+            id="project"
+            className="min-vh-100 my-5 position-relative d-flex align-items-center"
+        >
+            <div className="w-100 h-100 z-999 position-relative">
                 <div className="my-5">
                     <h1 className="font-topic fs-1 text-center">
                         Réalisations
