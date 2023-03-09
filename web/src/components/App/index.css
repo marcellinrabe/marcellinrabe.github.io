@@ -8,6 +8,11 @@
     src: url('../../assets/fonts/Cascadia.ttf');
 }
 
+@font-face {
+    font-family: 'Climat Crisis';
+    src: url('../../assets/fonts/ClimateCrisis-Regular.ttf');
+}
+
 :root {
     --font-text: 'Open Sans';
     --font-title: 'Cascadia Code';
@@ -127,7 +132,7 @@ header .navbar {
     transition-delay: 100ms;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1001;
     transform: translateY(-5px);
 }
 
@@ -144,6 +149,15 @@ header .navbar.attached {
 header .navbar.unattached {
     position: fixed;
     transform: translateY(10px);
+}
+
+.nav__nav-link:hover {
+    background-color: rgba(236, 236, 236, 0.9);
+}
+
+.nav__nav-link.active {
+    background: rgb(190, 190, 243);
+    color: white !important;
 }
 
 /* Profile field stylesheet */
@@ -197,6 +211,10 @@ header .navbar.unattached {
     transform: skewX(-2deg);
 }
 
+.icon-danger {
+    transform: translate(100%, 130%);
+}
+
 /* Skills field stylesheet */
 .gap-4 {
     gap: 4px;
@@ -242,10 +260,15 @@ ul.social-link {
     background-color: rgba(0, 0, 0, 0.5);
     transition: opacity 350ms 200ms;
     opacity: 0;
-    z-index: 999;
+    z-index: 998;
 }
 
-.overlay:hover {
+.overlay.full-opacity {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.overlay.hovered:hover {
     opacity: 1;
 }
 

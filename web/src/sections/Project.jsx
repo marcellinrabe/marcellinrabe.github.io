@@ -1,6 +1,6 @@
-import { FaGithub } from 'react-icons/fa'
-import { SlScreenDesktop } from 'react-icons/sl'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import { FaGithub } from 'react-icons/fa';
+import { SlScreenDesktop } from 'react-icons/sl';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 export default function Project({ publicRepos }) {
     return (
@@ -22,12 +22,12 @@ export default function Project({ publicRepos }) {
                             >
                                 <div className="w-100">
                                     <img
-                                        src={repo.metadata.img_preview}
+                                        src={repo.img_preview}
                                         alt="img"
                                         className="w-100 h-100 rounded"
                                     />
                                 </div>
-                                <div className="position-absolute rounded top-0 start-0 px-2 overlay h-100 text-light">
+                                <div className="position-absolute rounded top-0 start-0 px-2 overlay hovered h-100 text-light">
                                     <div className="d-flex align-items-center h-100">
                                         <div>
                                             <div>
@@ -59,5 +59,5 @@ export default function Project({ publicRepos }) {
                 </ResponsiveMasonry>
             </div>
         </div>
-    )
+    );
 }

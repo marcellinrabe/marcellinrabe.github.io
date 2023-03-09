@@ -1,11 +1,11 @@
-import React from 'react'
-import { SiFacebook, SiGithub, SiLinkedin } from 'react-icons/si'
+import React from 'react';
+import { SiFacebook, SiGithub, SiLinkedin } from 'react-icons/si';
 
 const datas = [
     {
         Component: SiLinkedin,
         href: 'https://www.linkedin.com/in/marcellinrabe/',
-        color: '#1877f2',
+        color: '#0072b1',
     },
     {
         Component: SiGithub,
@@ -17,7 +17,7 @@ const datas = [
         href: 'https://www.facebook.com/rabemarcellin',
         color: '#1877f2',
     },
-]
+];
 
 export default function SocialLink() {
     return (
@@ -30,5 +30,5 @@ export default function SocialLink() {
                 </li>
             ))}
         </ul>
-    )
+    );
 }
