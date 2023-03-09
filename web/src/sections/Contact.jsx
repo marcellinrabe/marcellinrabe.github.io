@@ -30,7 +30,6 @@ export default function Contact() {
         const { name, value } = event.target;
 
         if (name in state.firstError) {
-            console.log('efa firstError');
             applyValidation(event.target);
         }
 
@@ -62,8 +61,6 @@ export default function Contact() {
 
     const applyValidation = (target) => {
         const { name, value } = target;
-
-        console.log({ name, value });
 
         if (name in state.firstError) {
             setErrorField(name, value);
@@ -114,7 +111,6 @@ export default function Contact() {
                     .then(() => {
                         form.current.reset();
                         setState(initialState);
-
                         toast('email envoyé');
                     });
             } else {
@@ -158,8 +154,6 @@ export default function Contact() {
     useEffect(() => {
         if (state.firstError.allInOne) {
             for (let errorField in state.firstError) {
-                console.log('errorfield');
-                console.log(errorField);
                 const tag =
                     document.querySelector(`input[name='${errorField}']`) &&
                     errorField !== 'allInOne'

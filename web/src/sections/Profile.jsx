@@ -3,7 +3,6 @@ import { BsArrowDownCircle } from 'react-icons/bs';
 import SocialLink from '../components/SocialLink';
 
 export default function Profile({ user }) {
-    console.log(user);
     return (
         <div id="profile" className="my-5">
             <div className="row">
