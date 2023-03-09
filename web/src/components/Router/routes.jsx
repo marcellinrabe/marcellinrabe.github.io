@@ -1,10 +1,9 @@
-import App, { dataLoader } from '../App'
+import App, { dataLoader } from '../App';
 
 export default [
     {
-        path: '/',
+        path: '/Portfolio',
         element: <App />,
         loader: dataLoader,
-        loadingMode: 'render',
     },
-]
+];
