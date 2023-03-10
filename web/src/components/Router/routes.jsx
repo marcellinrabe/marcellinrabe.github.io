@@ -1,9 +1,9 @@
-import App, { dataLoader } from '../App';
+import App, { loader } from '../App';
 
 export default [
     {
         path: '/Portfolio',
         element: <App />,
-        loader: dataLoader,
+        loader: loader,
     },
 ];
