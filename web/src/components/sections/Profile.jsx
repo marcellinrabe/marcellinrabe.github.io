@@ -1,21 +1,19 @@
-import AboutMeImg from '../assets/about-me.png';
+/* Package components */
 import { BsArrowDownCircle } from 'react-icons/bs';
-import SocialLink from '../components/SocialLink';
-import { useQuery } from 'react-query';
 import ContentLoader from 'react-content-loader';
+import { useContext } from 'react';
+
+/* Custom components */
+import SocialLink from '../SocialLink';
+import userContext from '../contexts/userContext';
+
+/* assets */
+import AboutMeImg from '../../assets/about-me.png';
 
 export default function Profile() {
-    const API_URL = 'https://marcellinrabe-portfolio-server.onrender.com';
+    const { user } = useContext(userContext);
 
-    const { isLoading, data } = useQuery('data', async () => {
-        const serverForm = await fetch(`${API_URL}/user/me`);
-
-        if (!serverForm.ok) throw Error('error when fetching user');
-
-        return serverForm.json();
-    });
-
-    if (isLoading) {
+    if (!user) {
         return (
             <ContentLoader viewBox="0 0 380 70">
                 <rect x="0" y="0" rx="5" ry="5" width="70" height="70" />
@@ -30,11 +28,11 @@ export default function Profile() {
             <div className="row">
                 <div className="col-lg-6">
                     <div className="w-100 my-3">
-                        {data && (
+                        {user && (
                             <div className="d-flex justify-content-center justify-content-lg-start">
                                 <div className="profile-img-container">
                                     <img
-                                        src={data.avatar_url}
+                                        src={user.avatar_url}
                                         className="rounded-circle avatar position-relative w-75 h-75"
                                         alt="avatar"
                                     />
@@ -63,9 +61,9 @@ export default function Profile() {
                                 width: 'max-content',
                             }}
                         >
-                            {data && (
+                            {user && (
                                 <a
-                                    href={data.cv_url}
+                                    href={user.cv_url}
                                     target="_blank"
                                     className="font-tite"
                                 >

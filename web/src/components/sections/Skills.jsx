@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { Card } from 'react-bootstrap'
-import skillsData from '../datas/skills'
+import React, { useEffect } from 'react';
+import { Card } from 'react-bootstrap';
+import skillsData from '../../datas/skills';
 
-import AOS from 'aos'
+import AOS from 'aos';
 
 function SkillCard({ title, skillNode }) {
     return (
@@ -41,13 +41,13 @@ function SkillCard({ title, skillNode }) {
                 </div>
             </Card.Body>
         </Card>
-    )
+    );
 }
 
 export default function () {
     useEffect(() => {
-        AOS.init()
-    }, [])
+        AOS.init();
+    }, []);
 
     return (
         <div
@@ -71,5 +71,5 @@ export default function () {
                 </div>
             </div>
         </div>
-    )
+    );
 }

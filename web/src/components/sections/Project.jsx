@@ -18,9 +18,6 @@ export default function Project() {
         }
     );
 
-    if (isSuccess) {
-        console.log(data);
-    }
     return (
         <div
             id="project"
@@ -66,7 +63,7 @@ export default function Project() {
                             </ContentLoader>
                         ) : (
                             data.map((repo) => (
-                                <div className="w-100">
+                                <div className="w-100" key={repo.id}>
                                     <h3 className="font-title">{repo.name}</h3>
                                     <div
                                         data-aos="zoom-in-up"

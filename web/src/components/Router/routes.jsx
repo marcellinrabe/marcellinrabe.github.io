@@ -1,8 +1,9 @@
-import { AppRouteProvider } from '../App';
+import App, { appLoader } from '../App';
 
 export default [
     {
         path: '/',
-        element: <AppRouteProvider />,
+        element: <App />,
+        loader: appLoader,
     },
 ];

@@ -19,6 +19,14 @@
     --github-brand-color: #333;
     --facebook-brand-color: #1877f2;
     --font-topic: 'Climate Crisis', cursive;
+    --color-light: #e3dcd2;
+    --color-dark: #100c0d;
+    --color-primary: #013328;
+    --color-secondary: #cc8;
+}
+
+.background-primary {
+    background-color: var(--color-primary) !important;
 }
 
 body {
@@ -26,11 +34,6 @@ body {
     font-size: medium !important;
     scroll-behavior: smooth;
     font-size: 14px !important;
-    --bs-bg-opacity: 1;
-    background-color: rgba(
-        var(--bs-light-rgb),
-        var(--bs-bg-opacity)
-    ) !important;
 }
 
 a {

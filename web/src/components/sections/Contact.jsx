@@ -1,10 +1,14 @@
+/* Package components */
 import React, { useRef, useState, useEffect } from 'react';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
-import SocialLink from '../components/SocialLink';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import { HashLoader } from 'react-spinners';
 import { CgDanger, CgCheckO } from 'react-icons/cg';
+
+/* Custom components */
+
+import SocialLink from '../SocialLink';
 import { EmptyFormError } from './error.type';
 
 export default function Contact() {
