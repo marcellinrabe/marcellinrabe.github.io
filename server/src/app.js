@@ -56,6 +56,8 @@ const readOwnPublicRepos = async () => {
             github_url: repo.html_url,
             homepage: repo.homepage ? repo.homepage : null,
             img_preview: img_preview,
+            language: repo.language,
+            topics: repo.topics,
         };
 
         return publicRepo;
