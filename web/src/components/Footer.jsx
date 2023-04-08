@@ -2,14 +2,35 @@ import React from 'react';
 
 export default function () {
     return (
-        <div className="text-center my-3 bg-success rounded-3 text-light p-2 shadow">
-            <span>
-                Copyright © 2023 RABE Marcellin. Tous droits réservés. Le
-                contenu de ce site web est protégé par les lois sur le droit
-                d'auteur et ne peut être reproduit, distribué, transmis,
-                affiché, publié ou diffusé sans autorisation préalable écrite de
-                l'auteur.
-            </span>
+        <div id="footer" className="container">
+            <div className="site-details grid grid-cols-4 leading-8">
+                <div>
+                    <span className="font-text-lg">Contacts</span>
+                    <ul className="p-0 text-gray-600">
+                        <li>034 93 946 98</li>
+                        <li>marcellinr.rabe@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <span className="font-text-lg">En recherche</span>
+                    <ul className="p-0 text-gray-600">
+                        <li>alternance</li>
+                        <li>nouvelle opportunité</li>
+                    </ul>
+                </div>
+                <div>
+                    <span className="font-text-lg">Plateforme social</span>
+                    <ul className="p-0 text-gray-600">
+                        <li>Linkedin</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="text-center my-3 text-gray">
+                <span>
+                    Copyright © 2023 RABE Marcellin. Tous droits réservés.
+                </span>
+            </div>
         </div>
     );
 }

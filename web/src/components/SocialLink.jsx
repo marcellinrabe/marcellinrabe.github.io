@@ -21,7 +21,7 @@ const datas = [
 
 export default function SocialLink() {
     return (
-        <ul className="flex justify-center">
+        <ul className="flex justify-center gap-2">
             {datas.map((social, index) => (
                 <li key={index + social.href}>
                     <a href={social.href}>
