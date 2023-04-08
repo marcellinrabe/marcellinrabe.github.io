@@ -63,11 +63,14 @@ export default function Project() {
                             </ContentLoader>
                         ) : (
                             data.map((repo) => (
-                                <div className="w-100" key={repo.id}>
+                                <div
+                                    className="w-100"
+                                    key={repo.id}
+                                    data-aos="zoom-in-up"
+                                    data-aos-once="true"
+                                >
                                     <h3 className="font-title">{repo.name}</h3>
                                     <div
-                                        data-aos="zoom-in-up"
-                                        data-aos-once="true"
                                         key={repo.id}
                                         className="w-100 rounded border border-2 my-2 p-1 bg-white position-relative"
                                     >
