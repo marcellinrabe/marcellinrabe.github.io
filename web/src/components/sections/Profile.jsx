@@ -12,6 +12,7 @@ import { HiOutlineDevicePhoneMobile } from 'react-icons/hi2';
 /* Custom components */
 import SocialLink from '../SocialLink';
 import userContext from '../contexts/userContext';
+import LineBreak from '../LineBreak';
 
 export default function Profile() {
     const { user } = useContext(userContext);
@@ -135,6 +136,7 @@ export default function Profile() {
                     )}
                 </div>
             </div> */}
+            <LineBreak />
         </div>
     );
 }

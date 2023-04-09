@@ -1,48 +1,62 @@
 import React, { useEffect } from 'react';
-import { Card } from 'react-bootstrap';
 import skillsData from '../../datas/skills';
 
 import AOS from 'aos';
+import { MdFavorite } from 'react-icons/md';
+import LineBreak from '../LineBreak';
 
-function SkillCard({ title, skillNode }) {
+const Card = ({ skill }) => {
     return (
-        <Card className="p-2 shadow border-0 bg-light">
-            <Card.Title className="fs-6">
-                <span className="font-title">{title}</span>
-            </Card.Title>
-            <Card.Body>
-                <div className="w-100 h-100 d-flex gap-4 flex-wrap">
-                    {skillNode.map((lang, index) =>
-                        typeof lang.Component === 'string' ? (
-                            <div
-                                data-aos="fade-down"
-                                data-aos-delay={index * 100}
-                                data-aos-once="true"
-                                className="fw-bold p-2 d-flex align-items-center rounded-2"
-                                style={{
-                                    color: lang.color,
-                                    backgroundColor: lang.backgroundColor,
-                                }}
-                                key={index}
-                            >
-                                {lang.Component}
+        <>
+            <div className="grid md:flex flex-wrap">
+                <div className="w-full md:w-1/4 md:flex-none">
+                    <div className="w-full h-full flex items-center justify-center">
+                        <div>
+                            <div className="w-100 flex justify-center">
+                                <skill.Logo
+                                    size={100}
+                                    className="text-center"
+                                />
                             </div>
-                        ) : (
-                            <span
-                                data-aos="fade-down"
-                                data-aos-delay={index * 100}
-                                data-aos-once="true"
-                                key={index}
-                            >
-                                <lang.Component size={40} color={lang.color} />
-                            </span>
-                        )
-                    )}
+                            <div className="border flex flex-wrap gap-1 rounded-lg p-2 my-2">
+                                {skill.packagesRelatedLogo.map(
+                                    (Each, index) => (
+                                        <Each
+                                            className="text-gray-500"
+                                            key={index ** index}
+                                        />
+                                    )
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </Card.Body>
-        </Card>
+                <div className="w-full font-title flex-auto md:w-1/2 ">
+                    <div className="flex justify-between">
+                        <div className="text-gray-500">{skill.name}</div>
+                        <div className="flex items-center">
+                            {skill.frequentlyUse && <MdFavorite size={24} />}
+                            {skill.topics.map((Each, index) => (
+                                <Each key={index + index * index} />
+                            ))}
+                        </div>{' '}
+                    </div>
+                    <div className="border-l-2 border-gray-500">
+                        <ul className="leading-7 list-disc">
+                            {skill.skills.map((each, index) => (
+                                <li
+                                    key={index}
+                                    dangerouslySetInnerHTML={{ __html: each }}
+                                />
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <LineBreak />
+        </>
     );
-}
+};
 
 export default function () {
     useEffect(() => {
@@ -52,21 +66,12 @@ export default function () {
     return (
         <div
             id="skills"
-            className=" position-relative my-5 d-flex align-items-center justify-content-center"
+            className="relative my-5 flex items-center justify-center"
         >
             <div className="h-100 w-100 z-999">
-                <div>
-                    <h1 className="font-topic text-center fs-1 my-5">
-                        Compétences
-                    </h1>
-                </div>
-                <div className="d-grid cols-lg-2 gap-4">
+                <div className="container">
                     {skillsData.map((each, index) => (
-                        <SkillCard
-                            key={index}
-                            title={each.title}
-                            skillNode={each.skillNode}
-                        />
+                        <Card skill={each} key={index + index ** 1000} />
                     ))}
                 </div>
             </div>

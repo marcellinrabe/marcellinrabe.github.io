@@ -3,7 +3,7 @@ import React from 'react';
 export default function () {
     return (
         <div id="footer" className="container">
-            <div className="site-details grid grid-cols-4 leading-8">
+            <div className="site-details grid grid-cols-2 md:grid-cols-4 leading-8">
                 <div>
                     <span className="font-text-lg">Contacts</span>
                     <ul className="p-0 text-gray-600">

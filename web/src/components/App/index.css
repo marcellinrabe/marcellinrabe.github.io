@@ -4,7 +4,7 @@
 
 @layer components {
     .navbar .nav-link {
-        @apply font-text-lg;
+        @apply font-title;
     }
 }
 @font-face {
@@ -13,7 +13,7 @@
 }
 
 :root {
-    --font-text: 'Opens Sans', sans-serif;
+    --font-text: 'Public Sans', sans-serif;
     --github-brand-color: #333;
     --facebook-brand-color: #1877f2;
     --color-light: #e3dcd2;
