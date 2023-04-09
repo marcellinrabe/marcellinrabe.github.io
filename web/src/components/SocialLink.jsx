@@ -22,7 +22,9 @@ export default function SocialLink() {
             {datas.map((social, index) => (
                 <li key={index + social.href}>
                     <a href={social.href}>
-                        {<social.Component className="text-gray-500" />}
+                        {
+                            <social.Component className="text-gray-500 hover:text-gray-800" />
+                        }
                     </a>
                 </li>
             ))}

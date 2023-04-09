@@ -2,101 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .navbar .nav-link {
-        @apply font-title;
+@layer base {
+    body {
+        @apply font-text text-sm scroll-smooth;
     }
-}
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../../assets/fonts/OpenSans-Regular.ttf');
-}
 
-:root {
-    --font-text: 'Public Sans', sans-serif;
-    --github-brand-color: #333;
-    --facebook-brand-color: #1877f2;
-    --color-light: #e3dcd2;
-    --color-dark: #100c0d;
-    --color-primary: #013328;
-    --color-secondary: #cc8;
-}
-
-.background-primary {
-    background-color: var(--color-primary) !important;
-}
-
-body {
-    font-family: var(--font-text) !important;
-    font-size: medium !important;
-    scroll-behavior: smooth;
-    font-size: 14px !important;
-}
-
-a {
-    color: unset !important;
-    text-decoration: none !important;
-}
-
-.related .col-lg-8,
-.related .col-lg-4 {
-    z-index: 3;
-}
-
-.z-999 {
-    z-index: 999;
-}
-
-/* Navbar field stylesheet */
-
-header .navbar {
-    transition-property: all;
-    transition-duration: 200ms;
-    transition-delay: 100ms;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    transform: translateY(-5px);
-}
-
-header .navbar.sticky {
-    padding: 10px 0px;
-    background: white !important;
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05) !important;
-}
-
-header .navbar.attached {
-    position: static;
-}
-
-header .navbar.unattached {
-    position: fixed;
-    transform: translateY(10px);
-}
-
-/* Contact field stylesheet */
-
-.bg-sky {
-    background-image: url('../../assets/sky.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-code-bro {
-    background-image: url('../../assets/Coding-bro.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.grid-cols {
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 4px;
-}
-
-.skew-2-reverse {
-    transform: skewX(-2deg);
-}
-
-.icon-danger {
-    transform: translate(100%, 130%);
+    a {
+        @apply text-current no-underline;
+    }
 }

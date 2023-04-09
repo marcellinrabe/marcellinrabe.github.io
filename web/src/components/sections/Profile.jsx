@@ -29,15 +29,15 @@ export default function Profile() {
 
     return (
         <div id="profile" className="translate-y-[15vh] pb-[15vh]">
-            <div className="container grid justify-center">
+            <div className="container grid justify-center m-auto">
                 {user && (
                     <div className="text-center">
                         <div className="grid justify-center">
                             <div className="relative">
-                                <div className="grid align-center absolute top-0 z-10 origin-center translate-x-1/2 translate-y-1/2">
+                                <div className="grid items-center absolute top-0 z-10 origin-center translate-x-1/2 translate-y-1/2">
                                     <img
                                         src={user.avatar_url}
-                                        className=" w-40 h-40 rounded-circle shadow"
+                                        className=" w-40 h-40 rounded-full shadow"
                                         alt="avatar"
                                     />
                                 </div>
@@ -105,37 +105,13 @@ export default function Profile() {
                         </div>
                     </div>
                 )}
-                <div className="social-links mx-2">
-                    <div className="font-text-lg font-medium text-2xl lg:text-4xl my-2 align-self-start">
+                <div className="my-2">
+                    <div className="font-text-lg font-medium text-2xl lg:text-4xl">
                         Développeur web junior
                     </div>
                     <SocialLink />
                 </div>
             </div>
-
-            {/* <div aria-label="img-size-related" className="w-100 h-100">
-                <img
-                    src={AboutMeImg}
-                    alt="about-me-json"
-                    className="w-100 m-auto"
-                />
-                <div
-                    className="text-center border border-dark p-2 my-3"
-                    style={{
-                        width: 'max-content',
-                    }}
-                >
-                    {user && (
-                        <a
-                            href={user.cv_url}
-                            target="_blank"
-                            className="font-tite"
-                        >
-                            Télécharger mon CV <BsArrowDownCircle />
-                        </a>
-                    )}
-                </div>
-            </div> */}
             <LineBreak />
         </div>
     );
