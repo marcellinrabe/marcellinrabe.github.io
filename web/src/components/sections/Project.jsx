@@ -53,7 +53,7 @@ export default function Project() {
                 ) : (
                     data.map((repo) => (
                         <div key={repo.id} className="h-[50vh]">
-                            <div className="h-full w-full transition duration-300 ease-in-out hover:shadow border rounded p-2 flex items-center justify-center">
+                            <div className="h-full w-full transition duration-300 ease-in-out hover:shadow-lg border rounded p-2 flex items-center justify-center">
                                 <div>
                                     <div className="flex items-center pb-2 justify-between">
                                         <div className="font-text-lg">

@@ -8,7 +8,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                title: ['Public Sans', 'sans-serif'],
+                text: ['Public Sans', 'sans-serif'],
                 'text-lg': ['Poppins', 'sans-serif'],
                 logo: ['Pacifico', 'cursive'],
             },

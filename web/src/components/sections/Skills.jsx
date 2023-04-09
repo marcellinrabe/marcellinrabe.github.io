@@ -42,7 +42,7 @@ const Card = ({ skill }) => {
                         </div>{' '}
                     </div>
                     <div className="border-l-2 border-gray-500">
-                        <ul className="leading-7 list-disc">
+                        <ul className="leading-7 list-disc pl-8">
                             {skill.skills.map((each, index) => (
                                 <li
                                     key={index}
