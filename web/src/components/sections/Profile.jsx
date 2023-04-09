@@ -28,7 +28,7 @@ export default function Profile() {
     }
 
     return (
-        <div id="profile" className="translate-y-[15vh] pb-5">
+        <div id="profile" className="translate-y-[15vh] pb-[15vh]">
             <div className="container grid justify-center">
                 {user && (
                     <div className="text-center">

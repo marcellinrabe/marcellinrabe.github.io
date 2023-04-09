@@ -74,34 +74,6 @@ header .navbar.unattached {
     transform: translateY(10px);
 }
 
-/* Profile field stylesheet */
-
-.skew-2 {
-    transform: skewX(2deg);
-}
-
-@keyframes up-to-down-reverse {
-    from {
-        transform: translateY(5px);
-    }
-
-    to {
-        transform: translateY(-5px);
-    }
-}
-
-.up-to-down-reverse.infinite {
-    animation-name: up-to-down-reverse;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-.social-links ul {
-    list-style-type: none;
-    gap: 4px;
-}
-
 /* Contact field stylesheet */
 
 .bg-sky {
@@ -127,79 +99,4 @@ header .navbar.unattached {
 
 .icon-danger {
     transform: translate(100%, 130%);
-}
-
-/* Skills field stylesheet */
-.gap-4 {
-    gap: 4px;
-}
-
-@media screen AND (min-width: 768px) {
-    .cols-lg-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cols-lg-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Project field stylesheet */
-
-#project .bg-project:hover {
-    transform: scale(1.2) !important;
-}
-
-#project ul {
-    list-style-type: none;
-}
-
-a.disabled {
-    pointer-events: none;
-    color: gray;
-}
-
-.text-gray {
-    color: gray;
-}
-
-ul.social-link {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 8px;
-}
-
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 350ms 200ms;
-    opacity: 0;
-    z-index: 998;
-}
-
-.overlay.full-opacity {
-    opacity: 1;
-    z-index: 1000;
-}
-
-.overlay.hovered:hover {
-    opacity: 1;
-}
-
-@media screen AND (min-width: 768px) {
-    .cols-lg-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media screen AND (max-width: 992px) {
-    .bg-project-container {
-        height: 40vh !important;
-    }
-}
-
-@media screen AND (min-width: 992px) {
-    .vh-lg-50 {
-        height: 50vh;
-    }
 }

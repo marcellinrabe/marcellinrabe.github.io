@@ -64,16 +64,11 @@ export default function () {
     }, []);
 
     return (
-        <div
-            id="skills"
-            className="relative my-5 flex items-center justify-center"
-        >
-            <div className="h-100 w-100 z-999">
-                <div className="container">
-                    {skillsData.map((each, index) => (
-                        <Card skill={each} key={index + index ** 1000} />
-                    ))}
-                </div>
+        <div id="skills" className="relative flex items-center justify-center">
+            <div className="container">
+                {skillsData.map((each, index) => (
+                    <Card skill={each} key={index + index ** 1000} />
+                ))}
             </div>
         </div>
     );
