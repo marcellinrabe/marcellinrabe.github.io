@@ -12,7 +12,7 @@ const datas = [
     },
     {
         Component: SiFacebook,
-        href: 'https://www.facebook.com/rabemarcellin',
+        href: 'https://www.facebook.com/marcellinr.rabe',
     },
 ];
 
