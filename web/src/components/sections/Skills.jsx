@@ -23,7 +23,11 @@ const Card = ({ skill }) => {
                                     (Each, index) => (
                                         <Each
                                             className="text-gray-500"
-                                            key={index ** index}
+                                            key={
+                                                skill.packagesRelatedLogo
+                                                    .length +
+                                                skill.skills[index]
+                                            }
                                         />
                                     )
                                 )}
@@ -37,7 +41,7 @@ const Card = ({ skill }) => {
                         <div className="flex items-center">
                             {skill.frequentlyUse && <MdFavorite size={24} />}
                             {skill.topics.map((Each, index) => (
-                                <Each key={index + index * index} />
+                                <Each key={skill.name[index] + 'topic'} />
                             ))}
                         </div>{' '}
                     </div>
@@ -45,7 +49,7 @@ const Card = ({ skill }) => {
                         <ul className="leading-7 list-disc pl-8">
                             {skill.skills.map((each, index) => (
                                 <li
-                                    key={index}
+                                    key={index + each}
                                     dangerouslySetInnerHTML={{ __html: each }}
                                 />
                             ))}
@@ -66,8 +70,8 @@ export default function () {
     return (
         <div id="skills" className="relative flex items-center justify-center">
             <div className="container">
-                {skillsData.map((each, index) => (
-                    <Card skill={each} key={index + index ** 1000} />
+                {skillsData.map((skill) => (
+                    <Card skill={skill} key={skill.name} />
                 ))}
             </div>
         </div>
