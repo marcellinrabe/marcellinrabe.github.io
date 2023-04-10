@@ -91,6 +91,7 @@ const allowedOrigins = [
     'http://localhost:8080',
     'https://marcellinrabe-portfolio-server.onrender.com',
     'https://marcellinrabe.github.io',
+    'http://localhost:5173',
 ];
 
 const originMiddleware = (req, res, next) => {
