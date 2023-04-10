@@ -24,7 +24,7 @@ export default function Contact() {
                         <div className="grid gap-2">
                             <div className="w-full">
                                 <div className="grid grid-cols-2 gap-2">
-                                    <div class="relative">
+                                    <div className="relative">
                                         <input
                                             type="text"
                                             id="sender_email"
@@ -39,7 +39,7 @@ export default function Contact() {
                                             Adresse email
                                         </label>
                                     </div>
-                                    <div class="relative">
+                                    <div className="relative">
                                         <input
                                             type="text"
                                             id="sender_name"
@@ -56,7 +56,7 @@ export default function Contact() {
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative">
+                            <div className="relative">
                                 <input
                                     type="text"
                                     id="subject"
@@ -77,7 +77,7 @@ export default function Contact() {
                                     id="message"
                                     name="message"
                                     rows="4"
-                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Salut Marcellin,
 ..."
                                 ></textarea>
@@ -85,7 +85,7 @@ export default function Contact() {
                             <div className="my-2">
                                 <button
                                     type="submit"
-                                    class="inline-flex items-center py-2.5 px-4 font-medium text-center text-white bg-gray-500 rounded focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-gray-800"
+                                    className="inline-flex items-center py-2.5 px-4 font-medium text-center text-white bg-gray-500 rounded focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-gray-800"
                                 >
                                     Envoyer
                                 </button>
