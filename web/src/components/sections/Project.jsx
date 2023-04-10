@@ -1,6 +1,4 @@
 import { FaGithub } from 'react-icons/fa';
-import { SlScreenDesktop } from 'react-icons/sl';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { useQuery } from 'react-query';
 import ContentLoader from 'react-content-loader';
 import LineBreak from '../LineBreak';
@@ -8,16 +6,13 @@ import LineBreak from '../LineBreak';
 export default function Project() {
     const API_URL = 'https://marcellinrabe-portfolio-server.onrender.com';
 
-    const { isLoading, isSuccess, error, data } = useQuery(
-        'public_repos',
-        async () => {
-            const serverForm = await fetch(`${API_URL}/public-repos/`);
+    const { isLoading, data } = useQuery('public_repos', async () => {
+        const serverForm = await fetch(`${API_URL}/public-repos/`);
 
-            if (!serverForm.ok) throw Error('error when fetching public repos');
+        if (!serverForm.ok) throw Error('error when fetching public repos');
 
-            return serverForm.json();
-        }
-    );
+        return serverForm.json();
+    });
 
     return (
         <div id="project" className="relative container">
