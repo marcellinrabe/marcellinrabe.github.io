@@ -111,7 +111,7 @@ export default function App() {
     }
 
     return (
-        <div className="container mx-auto">
+        <div className="container w-11/12 mx-auto">
             <NavBar />
             <Profile />
             <Skills />
