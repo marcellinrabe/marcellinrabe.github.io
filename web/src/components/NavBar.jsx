@@ -4,7 +4,7 @@ import { Navbar } from 'flowbite-react/lib/esm/components';
 
 export default function NavBar() {
     return (
-        <header>
+        <header className="pb-[10vh]">
             <Navbar
                 fluid={true}
                 className="fixed items-center bg-white border-b w-full container z-20"

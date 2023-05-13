@@ -1,6 +1,8 @@
 /* Package components */
-import ContentLoader from 'react-content-loader';
 import { useContext } from 'react';
+
+import ContentLoader from 'react-content-loader';
+import { TypeAnimation } from 'react-type-animation';
 import { RiMouseLine } from 'react-icons/ri';
 import { DiCodeigniter } from 'react-icons/di';
 import { BiCodeCurly } from 'react-icons/bi';
@@ -28,8 +30,8 @@ export default function Profile() {
     }
 
     return (
-        <div id="profile" className="translate-y-[15vh] pb-[15vh]">
-            <div className="container grid justify-center m-auto">
+        <div id="profile" className="">
+            <div className="container grid justify-center m-auto h-screen">
                 {user && (
                     <div className="text-center">
                         <div className="grid justify-center">
@@ -106,9 +108,27 @@ export default function Profile() {
                     </div>
                 )}
                 <div className="my-2">
-                    <div className="font-text-lg font-medium text-2xl lg:text-4xl">
-                        Développeur web junior
+                    <div className="font-text-lg font-medium text-4xl">
+                        <div className="text-center">
+                            Développeur web junior
+                        </div>
+                        <div className="relative text-right lg:text-start min-w-max text-2xl">
+                            <TypeAnimation
+                                sequence={[
+                                    "en recherche d'alternance",
+                                    3000,
+                                    'de nouvelle opportunitée',
+                                    3000,
+                                ]}
+                                wrapper="div"
+                                cursor={true}
+                                repeat={Infinity}
+                                className="absolute top-0 left-0 text-gray-500"
+                            />
+                        </div>
                     </div>
+                </div>
+                <div className="text-base">
                     <SocialLink />
                 </div>
             </div>
