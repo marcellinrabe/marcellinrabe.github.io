@@ -38,7 +38,7 @@ jobs:
                   cache-dependency-path: './web/package-lock.json'
             - name: Install dependencies
               working-directory: ./web
-              run: npm config set legacy-peer-deps true && npm install
+              run: npm install --legacy-peer-deps
             - name: Build
               working-directory: ./web
               run: npm run build
