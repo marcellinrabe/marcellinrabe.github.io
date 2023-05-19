@@ -7,6 +7,15 @@ export default {
     ],
     theme: {
         extend: {
+            animation: {
+                scroll: 'scroll 12s 02s alternate infinite',
+            },
+            keyframes: {
+                scroll: {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-75%)' },
+                },
+            },
             fontFamily: {
                 text: ['Public Sans', 'sans-serif'],
                 'text-lg': ['Poppins', 'sans-serif'],

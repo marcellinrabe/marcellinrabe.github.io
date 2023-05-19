@@ -11,3 +11,13 @@
         @apply text-current no-underline;
     }
 }
+
+@layer components {
+    .carousel.carousel--container {
+        @apply relative w-full h-full md:flex hidden justify-center align-middle;
+    }
+
+    .carousel.carousel--card {
+        @apply border p-4 rounded-md bg-white;
+    }
+}
