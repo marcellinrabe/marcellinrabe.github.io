@@ -232,10 +232,10 @@
   resolved "https://registry.npmjs.org/@floating-ui/core/-/core-1.2.6.tgz"
   integrity sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==
 
-"@floating-ui/dom@^1.2.1":
-  version "1.2.6"
-  resolved "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.6.tgz"
-  integrity sha512-02vxFDuvuVPs22iJICacezYJyf7zwwOCWkPNkWNBr1U0Qt1cKFYzWvxts0AmqcOQGwt/3KJWcWIgtbUU38keyw==
+"@floating-ui/dom@^1.2.1", "@floating-ui/dom@^1.2.7":
+  version "1.2.8"
+  resolved "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.8.tgz"
+  integrity sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==
   dependencies:
     "@floating-ui/core" "^1.2.6"
 
@@ -245,6 +245,13 @@
   integrity sha512-htwHm67Ji5E/pROEAr7f8IKFShuiCKHwUC/UY4vC3I5jiSvGFAYnSYiZO5MlGmads+QqvUkR9ANHEguGrDv72g==
   dependencies:
     "@floating-ui/dom" "^1.2.1"
+
+"@floating-ui/react-dom@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.0.0.tgz"
+  integrity sha512-Ke0oU3SeuABC2C4OFu2mSAwHIP5WUiV98O9YWoHV4Q5aT6E9k06DV0Khi5uYspR8xmmBk08t8ZDcz3TR3ARkEg==
+  dependencies:
+    "@floating-ui/dom" "^1.2.7"
 
 "@floating-ui/react@^0.20.1":
   version "0.20.1"
