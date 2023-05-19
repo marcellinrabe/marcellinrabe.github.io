@@ -1,4 +1,3 @@
-import ReactCardCarousel from 'react-card-carousel';
 
 import { MdFavorite } from 'react-icons/md';
 
@@ -49,15 +48,8 @@ const Card = ({ skill }) => {
 
 export default function Skillv2() {
     return (
-        <div className="md:h-screen">
-            <div className="carousel carousel--container">
-                <ReactCardCarousel autoplay={true} autoplay_speed={10000}>
-                    {skillsData.map((skill) => (
-                        <Card skill={skill} key={skill.name} />
-                    ))}
-                </ReactCardCarousel>
-            </div>
-            <div className="grid md:hidden gap-4">
+           
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {skillsData.map((skill) => (
                     <Card skill={skill} key={skill.name} />
                 ))}
