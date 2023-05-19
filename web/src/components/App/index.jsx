@@ -18,6 +18,7 @@ import 'aos/dist/aos.css';
 
 /* others */
 import { API_URL } from '../../datas/constants';
+import LineBreak from '../LineBreak';
 
 const appLoader = async () => {
     const serverResponse = await fetch(`${API_URL}/user/me`);
@@ -115,6 +116,7 @@ export default function App() {
             <NavBar />
             <Profile />
             <Skills />
+            <LineBreak />
             <Project />
             <Contact />
             <Footer />

@@ -20,7 +20,7 @@ const Card = ({ skill }) => {
                     </div>
                 </div>
             </div>
-            <div className="md:w-96 md:h-56 overflow-y-auto">
+            <div className="h-44 overflow-auto">
                 <ul className="leading-7 list-disc pl-8 pr-2">
                     {skill.skills.map((each, index) => (
                         <li
