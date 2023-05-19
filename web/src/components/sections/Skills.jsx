@@ -1,4 +1,3 @@
-
 import { MdFavorite } from 'react-icons/md';
 
 import skillsData from '../../datas/skills';
@@ -48,12 +47,10 @@ const Card = ({ skill }) => {
 
 export default function Skillv2() {
     return (
-           
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {skillsData.map((skill) => (
-                    <Card skill={skill} key={skill.name} />
-                ))}
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {skillsData.map((skill) => (
+                <Card skill={skill} key={skill.name} />
+            ))}
         </div>
     );
 }
